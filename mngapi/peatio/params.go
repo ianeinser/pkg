@@ -83,11 +83,11 @@ type CreateMarketParams struct {
 }
 
 type UpdateMarketParams struct {
-	ID        string `json:"id"`
-	EngineID  string `json:"engine_id,omitempty"`
-	MinPrice  string `json:"min_price,omitempty"`
-	MaxPrice  string `json:"max_price,omitempty"`
-	MinAmount string `json:"min_amount,omitempty"`
+	ID              string `json:"id"`
+	EngineID        string `json:"engine_id,omitempty"`
+	MinPrice        string `json:"min_price,omitempty"`
+	MaxPrice        string `json:"max_price,omitempty"`
+	MinAmount       string `json:"min_amount,omitempty"`
 	AmountPrecision int64  `json:"amount_precision,omitempty"`
 	PricePrecision  int64  `json:"price_precision,omitempty"`
 }
@@ -183,4 +183,40 @@ type UpdateWalletParams struct {
 	Settings      Settings `json:"settings,omitempty"`
 	MaxBalance    string   `json:"max_balance,omitempty"`
 	Status        string   `json:"status,omitempty"`
+}
+
+type Beneficiary struct {
+	ID          int                    `json:"id"`
+	Currency    string                 `json:"currency"`
+	UID         string                 `json:"uid"`
+	Name        string                 `json:"name"`
+	Description string                 `json:"description"`
+	Data        map[string]interface{} `json:"data"` //-- contains account number, bank, asset code
+	State       string                 `json:"state"`
+	Sent_At     string                 `json:"sent_at"`
+}
+
+type CreateBeneficiaryParams struct {
+	Currency    string                 `json:"currency"`
+	Name        string                 `json:"name"`
+	Description string                 `json:"description,omitempty"`
+	Data        map[string]interface{} `json:"data"`
+	UID         string                 `json:"uid"`
+	State       string                 `json:"state,omitempty"`
+}
+
+type GetBeneficiariesParams struct {
+	UID      string `json:"uid"`
+	Currency string `json:"currency,omitempty"`
+	State    string `json:"state,omitempty"`
+}
+
+type ChangeDepositStateParams struct {
+	TID   string `json:"tid"`
+	State string `json:"state"`
+}
+
+type PerformActionOnWithdrawParams struct {
+	TID    string `json:"tid"`
+	Action string `json:"action"`
 }

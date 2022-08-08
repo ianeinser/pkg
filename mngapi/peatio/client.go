@@ -445,3 +445,65 @@ func (p *Client) GetWalletByID(id int) (*Wallet, *mngapi.APIError) {
 
 	return wallet, nil
 }
+
+func (p *Client) CreateBeneficiary(params CreateBeneficiaryParams) (*Beneficiary, *mngapi.APIError) {
+	res, apiError := p.mngapiClient.Request(http.MethodPost, "beneficiaries", params)
+	if apiError != nil {
+		return nil, apiError
+	}
+
+	beneficiary := &Beneficiary{}
+	err := json.Unmarshal([]byte(res), beneficiary)
+	if err != nil {
+		return nil, &mngapi.APIError{StatusCode: 500, Error: err.Error()}
+	}
+
+	return beneficiary, nil
+}
+
+func (p *Client) GetBeneficiaries(params GetBeneficiariesParams) ([]*Beneficiary, *mngapi.APIError) {
+	res, apiError := p.mngapiClient.Request(http.MethodPost, "beneficiaries/list", params)
+	if apiError != nil {
+		return nil, apiError
+	}
+
+	beneficiaries := make([]*Beneficiary, 0)
+
+	err := json.Unmarshal([]byte(res), &beneficiaries)
+	if err != nil {
+		return nil, &mngapi.APIError{StatusCode: 500, Error: err.Error()}
+	}
+
+	return beneficiaries, nil
+}
+
+func (p *Client) ChangeDepositState(params ChangeDepositStateParams) (*Deposit, *mngapi.APIError) {
+	res, apiError := p.mngapiClient.Request(http.MethodPut, "deposits/state", params)
+	if apiError != nil {
+		return nil, apiError
+	}
+
+	deposit := &Deposit{}
+	err := json.Unmarshal([]byte(res), &deposit)
+	if err != nil {
+		return nil, &mngapi.APIError{StatusCode: 500, Error: err.Error()}
+	}
+
+	return deposit, nil
+}
+
+// /--- PerformActionOnWithdraw calls peatio manaagement api to perform action on withdraw
+func (p *Client) PerformActionOnWithdraw(params PerformActionOnWithdrawParams) (*Withdraw, *mngapi.APIError) {
+	res, apiError := p.mngapiClient.Request(http.MethodPut, "withdraws/action", params)
+	if apiError != nil {
+		return nil, apiError
+	}
+
+	withdraw := &Withdraw{}
+	err := json.Unmarshal([]byte(res), withdraw)
+	if err != nil {
+		return nil, &mngapi.APIError{StatusCode: 500, Error: err.Error()}
+	}
+
+	return withdraw, nil
+}

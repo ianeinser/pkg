@@ -3,7 +3,7 @@ package coinmarketcap
 import (
 	"time"
 
-	"github.com/openware/pkg/request"
+	"github.com/ianeinser/pkg/request"
 )
 
 // Coinmarketcap account plan bitmasks, url and enpoint consts

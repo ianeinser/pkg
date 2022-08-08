@@ -14,10 +14,10 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/openware/pkg/common/timedmutex"
-	"github.com/openware/pkg/log"
-	"github.com/openware/pkg/mock"
-	"github.com/openware/pkg/nonce"
+	"github.com/ianeinser/pkg/common/timedmutex"
+	"github.com/ianeinser/pkg/log"
+	"github.com/ianeinser/pkg/mock"
+	"github.com/ianeinser/pkg/nonce"
 )
 
 // New returns a new Requester

@@ -13,8 +13,8 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/openware/pkg/common/crypto"
-	"github.com/openware/pkg/common/file"
+	"github.com/ianeinser/pkg/common/crypto"
+	"github.com/ianeinser/pkg/common/file"
 )
 
 // HTTPResponse defines expected response from the end point including request

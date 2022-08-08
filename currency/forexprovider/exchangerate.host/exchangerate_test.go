@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/openware/pkg/currency/forexprovider/base"
+	"github.com/ianeinser/pkg/currency/forexprovider/base"
 )
 
 var (

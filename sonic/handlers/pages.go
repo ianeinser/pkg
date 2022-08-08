@@ -1,7 +1,7 @@
 package handlers
 
 import (
-	"github.com/openware/pkg/sonic/models"
+	"github.com/ianeinser/pkg/sonic/models"
 	"html/template"
 	"net/http"
 

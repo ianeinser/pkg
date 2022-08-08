@@ -2,7 +2,7 @@ package currency
 
 import (
 	"fmt"
-	exchangerates "github.com/openware/pkg/currency/forexprovider/exchangeratesapi.io"
+	exchangerates "github.com/ianeinser/pkg/currency/forexprovider/exchangeratesapi.io"
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"
 	"io/ioutil"
@@ -19,7 +19,7 @@ func (m *mockRoundTripper) RoundTrip(request *http.Request) (*http.Response, err
 	args := m.Called(request)
 	return args.Get(0).(*http.Response), args.Error(1)
 }
-func setupMock()  {
+func setupMock() {
 	mockRoundTrip := &mockRoundTripper{}
 
 	mockBodyString := `{
@@ -42,8 +42,8 @@ func setupMock()  {
 
 	mockRoundTrip.On("RoundTrip", mock.Anything).Once().Return(&http.Response{
 		StatusCode: 200,
-		Status: "OK",
-		Body: mockBody,
+		Status:     "OK",
+		Body:       mockBody,
 	}, nil)
 
 	storage.fiatExchangeMarkets.Primary.Provider.(*exchangerates.ExchangeRates).Requester.HTTPClient.Transport = mockRoundTrip

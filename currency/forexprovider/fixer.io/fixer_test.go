@@ -3,7 +3,7 @@ package fixer
 import (
 	"testing"
 
-	"github.com/openware/pkg/currency/forexprovider/base"
+	"github.com/ianeinser/pkg/currency/forexprovider/base"
 )
 
 // Please set API key and apikey subscription level for correct due diligence

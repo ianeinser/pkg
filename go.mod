@@ -1,30 +1,31 @@
-module github.com/openware/pkg
+module github.com/ianeinser/pkg
 
-go 1.16
+go 1.19
 
 require (
-	github.com/alicebob/miniredis/v2 v2.14.3
+	github.com/alicebob/miniredis/v2 v2.22.0
 	github.com/fbiville/markdown-table-formatter v0.3.0
-	github.com/gin-gonic/gin v1.7.2
+	github.com/gin-gonic/gin v1.8.1
 	github.com/go-redis/redis v6.15.9+incompatible
-	github.com/gofrs/uuid v4.0.0+incompatible
+	github.com/gofrs/uuid v4.2.0+incompatible
 	github.com/golang-jwt/jwt v3.2.2+incompatible
-	github.com/gomarkdown/markdown v0.0.0-20210514010506-3b9f47219fe7
-	github.com/kr/text v0.2.0 // indirect
-	github.com/niemeyer/pretty v0.0.0-20200227124842-a10e7caefd8e // indirect
-	github.com/onsi/ginkgo v1.16.1 // indirect
-	github.com/onsi/gomega v1.11.0 // indirect
-	github.com/openware/kaigara/pkg/vault v0.0.0-20210428072529-c9aa6080bfe8
-	github.com/openware/pkg/mngapi v0.0.0-20210909215422-545bdd9fd380
-	github.com/shopspring/decimal v1.2.0
-	github.com/stretchr/testify v1.7.0
-	golang.org/x/net v0.0.0-20210316092652-d523dce5a7f4 // indirect
-	golang.org/x/time v0.0.0-20210220033141-f8bda1e9f3ba
-	gopkg.in/check.v1 v1.0.0-20200227125254-8fa46927fb4f // indirect
+	github.com/gomarkdown/markdown v0.0.0-20220731190611-dcdaee8e7a53
+	github.com/openware/kaigara/pkg/vault v0.0.0-20220719163221-540cd6b0bcbe
+	github.com/shopspring/decimal v1.3.1
+	github.com/stretchr/testify v1.8.0
+	golang.org/x/time v0.0.0-20220722155302-e5dcc9cfc0b9
 	gopkg.in/yaml.v2 v2.4.0
-	gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b // indirect
-	gorm.io/driver/mysql v1.1.0
-	gorm.io/driver/postgres v1.2.3
-	gorm.io/driver/sqlite v1.1.4
-	gorm.io/gorm v1.22.3
+	gorm.io/driver/mysql v1.3.5
+	gorm.io/driver/postgres v1.3.8
+	gorm.io/driver/sqlite v1.3.6
+	gorm.io/gorm v1.23.8
+)
+
+require (
+	github.com/davecgh/go-spew v1.1.1 // indirect
+	github.com/onsi/ginkgo v1.16.5 // indirect
+	github.com/onsi/gomega v1.20.0 // indirect
+	github.com/pmezard/go-difflib v1.0.0 // indirect
+	github.com/stretchr/objx v0.4.0 // indirect
+	gopkg.in/yaml.v3 v3.0.1 // indirect
 )

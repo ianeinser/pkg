@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/openware/pkg/mngapi"
+	"github.com/ianeinser/pkg/mngapi"
 )
 
 // Client is peatio management api client instance

@@ -14,9 +14,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/openware/pkg/common"
-	"github.com/openware/pkg/request"
-	"github.com/openware/pkg/log"
+	"github.com/ianeinser/pkg/common"
+	"github.com/ianeinser/pkg/log"
+	"github.com/ianeinser/pkg/request"
 )
 
 // SetDefaults sets default values for the exchange

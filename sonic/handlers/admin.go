@@ -4,8 +4,8 @@ import (
 	"bytes"
 	"encoding/json"
 	"fmt"
+	sonic "github.com/ianeinser/pkg/sonic/config"
 	"github.com/openware/kaigara/pkg/vault"
-	sonic "github.com/openware/pkg/sonic/config"
 	"io/ioutil"
 	"log"
 	"net/http"
@@ -14,8 +14,8 @@ import (
 	"time"
 
 	"github.com/gin-gonic/gin"
-	"github.com/openware/pkg/jwt"
-	"github.com/openware/pkg/mngapi/peatio"
+	"github.com/ianeinser/pkg/jwt"
+	"github.com/ianeinser/pkg/mngapi/peatio"
 )
 
 const (
@@ -271,7 +271,6 @@ func updateMarkets(sc *SonicContext, engineID string) error {
 	}
 	return nil
 }
-
 
 // CreatePlatform to handler '/api/v2/admin/platforms/new'
 func CreatePlatform(ctx *gin.Context, licenseCreator LicenseCreator, fetchConfig FetchConfigFunction) gin.HandlerFunc {

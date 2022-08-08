@@ -13,12 +13,13 @@ import (
 	"testing"
 	"time"
 
-	"github.com/openware/pkg/currency/forexprovider/base"
+	"github.com/ianeinser/pkg/currency/forexprovider/base"
 )
 
 var e ExchangeRates
 
 var initialSetup bool
+
 type mockRoundTripper struct {
 	mock.Mock
 }
@@ -33,18 +34,18 @@ func setup() *ExchangeRates {
 	e.Setup(base.Settings{
 		Name:    "ExchangeRates",
 		Enabled: true,
-		APIKey: "something",
+		APIKey:  "something",
 		Verbose: true,
 	})
 	return &e
 }
 
-func seedRate(date time.Time, base string, rates map[string]float64) map[string] interface{} {
+func seedRate(date time.Time, base string, rates map[string]float64) map[string]interface{} {
 	return map[string]interface{}{
 		"timestamp": date.Unix(),
-		"base": base,
-		"date": date.Format("2006-01-02"),
-		"rates": rates,
+		"base":      base,
+		"date":      date.Format("2006-01-02"),
+		"rates":     rates,
 	}
 }
 func mockRate(base string, rates map[string]float64) io.ReadCloser {
@@ -68,8 +69,8 @@ func mockTimeseries(start, end time.Time, base string, rates ...map[string]float
 	dateFormat := "2006-01-02"
 	rateResponse := map[string]map[string]float64{}
 
-	for i := 0; i < diff; i ++ {
-		rateResponse[start.Add(time.Hour * time.Duration(i * 24)).Format(dateFormat)] = rates[i]
+	for i := 0; i < diff; i++ {
+		rateResponse[start.Add(time.Hour*time.Duration(i*24)).Format(dateFormat)] = rates[i]
 	}
 	seed["rates"] = rateResponse
 
@@ -86,14 +87,14 @@ func TestGetLatestRates(t *testing.T) {
 
 	m.
 		On("RoundTrip", mock.Anything).Once().Return(&http.Response{
-		Status:           "ok",
-		StatusCode:       200,
-		Body:             mockRate("USD", map[string]float64{"EUR": 0.950345, "USD": 1.00}),
+		Status:     "ok",
+		StatusCode: 200,
+		Body:       mockRate("USD", map[string]float64{"EUR": 0.950345, "USD": 1.00}),
 	}, nil)
 	m.On("RoundTrip", mock.Anything).Once().Return(&http.Response{
-		Status:           "ok",
-		StatusCode:       200,
-		Body:             mockRate("EUR", map[string]float64{"EUR": 1, "AUD": 1.912912}),
+		Status:     "ok",
+		StatusCode: 200,
+		Body:       mockRate("EUR", map[string]float64{"EUR": 1, "AUD": 1.912912}),
 	}, nil)
 
 	e.Requester.HTTPClient.Transport = m
@@ -153,9 +154,9 @@ func TestGetFailedRates(t *testing.T) {
 
 	m.
 		On("RoundTrip", mock.Anything).Once().Return(&http.Response{
-		Status:           "fail",
-		StatusCode:       500,
-		Body:             ioutil.NopCloser(strings.NewReader(`{"error":"internal server error"}`)),
+		Status:     "fail",
+		StatusCode: 500,
+		Body:       ioutil.NopCloser(strings.NewReader(`{"error":"internal server error"}`)),
 	}, nil)
 
 	e.Requester.HTTPClient.Transport = m
@@ -181,7 +182,7 @@ func TestGetHistoricalRates(t *testing.T) {
 	date, _ := time.Parse("2006-01-02", expectedDate)
 	m.On("RoundTrip", mock.Anything).Once().Return(&http.Response{
 		StatusCode: 200,
-		Body: mockHistoryRate(date, "USD", map[string]float64{"AUD": 1.2323, "EUR": 0.9999}),
+		Body:       mockHistoryRate(date, "USD", map[string]float64{"AUD": 1.2323, "EUR": 0.9999}),
 	}, nil)
 
 	e.Requester.HTTPClient.Transport = m

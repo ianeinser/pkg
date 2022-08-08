@@ -6,8 +6,8 @@ import (
 	"strings"
 
 	"github.com/gofrs/uuid"
-	"github.com/openware/pkg/dispatch"
-	"github.com/openware/pkg/asset"
+	"github.com/ianeinser/pkg/asset"
+	"github.com/ianeinser/pkg/dispatch"
 )
 
 func init() {

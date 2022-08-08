@@ -6,7 +6,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/openware/pkg/common"
+	"github.com/ianeinser/pkg/common"
 )
 
 // IFXProvider enforces standard functions for all foreign exchange providers

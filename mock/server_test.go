@@ -9,7 +9,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/openware/pkg/common"
+	"github.com/ianeinser/pkg/common"
 )
 
 type responsePayload struct {

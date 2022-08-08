@@ -7,7 +7,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/openware/pkg/common/convert"
+	"github.com/ianeinser/pkg/common/convert"
 )
 
 func TestMain(m *testing.M) {

@@ -5,12 +5,12 @@ package forexprovider
 import (
 	"errors"
 
-	"github.com/openware/pkg/currency/forexprovider/base"
-	currencyconverter "github.com/openware/pkg/currency/forexprovider/currencyconverterapi"
-	"github.com/openware/pkg/currency/forexprovider/currencylayer"
-	exchangerates "github.com/openware/pkg/currency/forexprovider/exchangeratesapi.io"
-	fixer "github.com/openware/pkg/currency/forexprovider/fixer.io"
-	"github.com/openware/pkg/currency/forexprovider/openexchangerates"
+	"github.com/ianeinser/pkg/currency/forexprovider/base"
+	currencyconverter "github.com/ianeinser/pkg/currency/forexprovider/currencyconverterapi"
+	"github.com/ianeinser/pkg/currency/forexprovider/currencylayer"
+	exchangerates "github.com/ianeinser/pkg/currency/forexprovider/exchangeratesapi.io"
+	fixer "github.com/ianeinser/pkg/currency/forexprovider/fixer.io"
+	"github.com/ianeinser/pkg/currency/forexprovider/openexchangerates"
 )
 
 // GetSupportedForexProviders returns a list of supported forex providers

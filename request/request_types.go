@@ -5,8 +5,8 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/openware/pkg/common/timedmutex"
-	"github.com/openware/pkg/nonce"
+	"github.com/ianeinser/pkg/common/timedmutex"
+	"github.com/ianeinser/pkg/nonce"
 )
 
 // Const vars for rate limiter

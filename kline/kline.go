@@ -8,10 +8,10 @@ import (
 	"sync"
 	"time"
 
-	"github.com/openware/pkg/common"
-	"github.com/openware/pkg/currency"
-	"github.com/openware/pkg/asset"
-	"github.com/openware/pkg/order"
+	"github.com/ianeinser/pkg/asset"
+	"github.com/ianeinser/pkg/common"
+	"github.com/ianeinser/pkg/currency"
+	"github.com/ianeinser/pkg/order"
 )
 
 // CreateKline creates candles out of trade history data for a set time interval
@@ -456,5 +456,3 @@ func CreateIntervalTime(tt time.Time) IntervalTime {
 func (i *IntervalTime) Equal(tt time.Time) bool {
 	return tt.Unix() == i.Ticks
 }
-
-

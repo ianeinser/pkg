@@ -7,9 +7,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/openware/pkg/common"
-	"github.com/openware/pkg/currency"
-	"github.com/openware/pkg/validate"
+	"github.com/ianeinser/pkg/common"
+	"github.com/ianeinser/pkg/currency"
+	"github.com/ianeinser/pkg/validate"
 )
 
 // Validate checks the supplied data and returns whether or not it's valid

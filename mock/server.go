@@ -13,9 +13,9 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/openware/pkg/common"
-	"github.com/openware/pkg/common/crypto"
-	"github.com/openware/pkg/common/file"
+	"github.com/ianeinser/pkg/common"
+	"github.com/ianeinser/pkg/common/crypto"
+	"github.com/ianeinser/pkg/common/file"
 )
 
 // DefaultDirectory defines the main mock directory

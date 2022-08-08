@@ -17,7 +17,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/openware/pkg/log"
+	"github.com/ianeinser/pkg/log"
 )
 
 // Vars for common.go operations

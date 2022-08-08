@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"sort"
 
-	math "github.com/openware/pkg/common/math"
-	"github.com/openware/pkg/log"
+	math "github.com/ianeinser/pkg/common/math"
+	"github.com/ianeinser/pkg/log"
 )
 
 // WhaleBombResult returns the whale bomb result

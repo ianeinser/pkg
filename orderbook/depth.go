@@ -6,8 +6,8 @@ import (
 	"time"
 
 	"github.com/gofrs/uuid"
-	"github.com/openware/pkg/dispatch"
-	"github.com/openware/pkg/log"
+	"github.com/ianeinser/pkg/dispatch"
+	"github.com/ianeinser/pkg/log"
 )
 
 // Depth defines a linked list of orderbook items

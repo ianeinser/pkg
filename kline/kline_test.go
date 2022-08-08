@@ -7,10 +7,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/openware/pkg/common/crypto"
-	"github.com/openware/pkg/currency"
-	"github.com/openware/pkg/asset"
-	"github.com/openware/pkg/order"
+	"github.com/ianeinser/pkg/asset"
+	"github.com/ianeinser/pkg/common/crypto"
+	"github.com/ianeinser/pkg/currency"
+	"github.com/ianeinser/pkg/order"
 )
 
 func TestValidateData(t *testing.T) {
@@ -452,15 +452,15 @@ func TestItem_SortCandlesByTimestamp(t *testing.T) {
 // 	if err != nil {
 // 		t.Fatal(err)
 // 	}
-// 
+//
 // 	if v[0].Time.UTC() != time.Unix(1546300800, 0).UTC() {
 // 		t.Fatalf("unexpected value received: %v", v[0].Time)
 // 	}
-// 
+//
 // 	if v[269].Close != 8177.91 {
 // 		t.Fatalf("unexpected value received: %v", v[269].Close)
 // 	}
-// 
+//
 // 	if v[364].Open != 7246 {
 // 		t.Fatalf("unexpected value received: %v", v[364].Open)
 // 	}

@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/openware/pkg/asset"
-	"github.com/openware/pkg/currency"
+	"github.com/ianeinser/pkg/asset"
+	"github.com/ianeinser/pkg/currency"
 	"github.com/shopspring/decimal"
 )
 

@@ -3,7 +3,7 @@ package openexchangerates
 import (
 	"testing"
 
-	"github.com/openware/pkg/currency/forexprovider/base"
+	"github.com/ianeinser/pkg/currency/forexprovider/base"
 )
 
 // please set apikey for due diligence testing NOTE testing uses your allocated

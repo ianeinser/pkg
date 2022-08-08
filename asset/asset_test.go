@@ -3,7 +3,7 @@ package asset
 import (
 	"testing"
 
-	"github.com/openware/pkg/common"
+	"github.com/ianeinser/pkg/common"
 )
 
 func TestString(t *testing.T) {

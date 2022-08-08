@@ -5,8 +5,8 @@ import (
 	"os"
 	"testing"
 
-	"github.com/openware/pkg/database"
-	"github.com/openware/pkg/ika"
+	"github.com/ianeinser/pkg/database"
+	"github.com/ianeinser/pkg/ika"
 )
 
 // TODO

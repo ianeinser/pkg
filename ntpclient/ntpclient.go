@@ -5,7 +5,7 @@ import (
 	"net"
 	"time"
 
-	"github.com/openware/pkg/log"
+	"github.com/ianeinser/pkg/log"
 )
 
 type ntppacket struct {

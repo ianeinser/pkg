@@ -3,7 +3,7 @@ package currency
 import (
 	"sync"
 
-	"github.com/openware/pkg/asset"
+	"github.com/ianeinser/pkg/asset"
 )
 
 // PairsManager manages asset pairs

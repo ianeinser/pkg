@@ -21,10 +21,10 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/openware/pkg/common"
-	"github.com/openware/pkg/currency/forexprovider/base"
-	"github.com/openware/pkg/request"
-	"github.com/openware/pkg/log"
+	"github.com/ianeinser/pkg/common"
+	"github.com/ianeinser/pkg/currency/forexprovider/base"
+	"github.com/ianeinser/pkg/log"
+	"github.com/ianeinser/pkg/request"
 )
 
 // Setup sets appropriate values for CurrencyLayer

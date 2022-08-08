@@ -4,8 +4,8 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/openware/pkg/asset"
-	"github.com/openware/pkg/currency"
+	"github.com/ianeinser/pkg/asset"
+	"github.com/ianeinser/pkg/currency"
 )
 
 var btcusd = currency.NewPair(currency.BTC, currency.USD)

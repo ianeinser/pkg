@@ -1,8 +1,8 @@
 package fixer
 
 import (
-	"github.com/openware/pkg/currency/forexprovider/base"
-	"github.com/openware/pkg/request"
+	"github.com/ianeinser/pkg/currency/forexprovider/base"
+	"github.com/ianeinser/pkg/request"
 )
 
 const (

@@ -6,10 +6,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/openware/pkg/asset"
-	"github.com/openware/pkg/currency"
-	"github.com/openware/pkg/kline"
-	"github.com/openware/pkg/order"
+	"github.com/ianeinser/pkg/asset"
+	"github.com/ianeinser/pkg/currency"
+	"github.com/ianeinser/pkg/kline"
+	"github.com/ianeinser/pkg/order"
 )
 
 func TestConvertTradesToCandles(t *testing.T) {

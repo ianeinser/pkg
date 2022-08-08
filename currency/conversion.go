@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/openware/pkg/log"
+	"github.com/ianeinser/pkg/log"
 )
 
 // ConversionRates defines protected conversion rate map for concurrent updating

@@ -5,9 +5,9 @@ import (
 	"time"
 
 	"github.com/gofrs/uuid"
-	"github.com/openware/pkg/asset"
-	"github.com/openware/pkg/currency"
-	"github.com/openware/pkg/order"
+	"github.com/ianeinser/pkg/asset"
+	"github.com/ianeinser/pkg/currency"
+	"github.com/ianeinser/pkg/order"
 )
 
 // DefaultProcessorIntervalTime is the default timer

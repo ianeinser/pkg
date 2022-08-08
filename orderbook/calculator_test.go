@@ -3,7 +3,7 @@ package orderbook
 import (
 	"testing"
 
-	"github.com/openware/pkg/currency"
+	"github.com/ianeinser/pkg/currency"
 )
 
 func testSetup() Base {

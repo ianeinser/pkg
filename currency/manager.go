@@ -4,8 +4,8 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/openware/pkg/common/convert"
-	"github.com/openware/pkg/asset"
+	"github.com/ianeinser/pkg/asset"
+	"github.com/ianeinser/pkg/common/convert"
 )
 
 // GetAssetTypes returns a list of stored asset types

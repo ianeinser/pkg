@@ -5,7 +5,7 @@ import (
 	"math/rand"
 	"strings"
 
-	"github.com/openware/pkg/log"
+	"github.com/ianeinser/pkg/log"
 )
 
 // NewPairsFromStrings takes in currency pair strings and returns a currency

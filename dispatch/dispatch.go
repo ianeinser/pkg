@@ -8,7 +8,7 @@ import (
 	"time"
 
 	"github.com/gofrs/uuid"
-	"github.com/openware/pkg/log"
+	"github.com/ianeinser/pkg/log"
 )
 
 var (

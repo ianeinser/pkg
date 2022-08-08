@@ -7,7 +7,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/openware/pkg/common/convert"
+	"github.com/ianeinser/pkg/common/convert"
 )
 
 func getWriters(s *SubLoggerConfig) io.Writer {

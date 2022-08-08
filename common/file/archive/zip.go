@@ -8,7 +8,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/openware/pkg/log"
+	"github.com/ianeinser/pkg/log"
 )
 
 const (

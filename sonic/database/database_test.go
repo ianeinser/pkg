@@ -5,7 +5,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/openware/pkg/ika"
+	"github.com/ianeinser/pkg/ika"
 )
 
 // TODO
@@ -51,7 +51,7 @@ database:
 `
 
 		type config struct {
-			ServerPort string          `yaml:"port"`
+			ServerPort string `yaml:"port"`
 			DbConfig   Config `yaml:"database"`
 		}
 

@@ -9,10 +9,10 @@ import (
 	"time"
 
 	"github.com/gofrs/uuid"
-	"github.com/openware/pkg/common"
-	"github.com/openware/pkg/kline"
-	"github.com/openware/pkg/log"
-	"github.com/openware/pkg/order"
+	"github.com/ianeinser/pkg/common"
+	"github.com/ianeinser/pkg/kline"
+	"github.com/ianeinser/pkg/log"
+	"github.com/ianeinser/pkg/order"
 )
 
 // Setup creates the trade processor if trading is supported

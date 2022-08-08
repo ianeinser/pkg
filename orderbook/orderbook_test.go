@@ -10,9 +10,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/openware/pkg/currency"
-	"github.com/openware/pkg/dispatch"
-	"github.com/openware/pkg/asset"
+	"github.com/ianeinser/pkg/asset"
+	"github.com/ianeinser/pkg/currency"
+	"github.com/ianeinser/pkg/dispatch"
 )
 
 func TestMain(m *testing.M) {
@@ -647,7 +647,7 @@ func BenchmarkReverse(b *testing.B) {
 	}
 }
 
-//   20209	     56385 ns/op	   49189 B/op	       2 allocs/op
+// 20209	     56385 ns/op	   49189 B/op	       2 allocs/op
 func BenchmarkSortAsksDecending(b *testing.B) {
 	s := deploySliceOrdered()
 	for i := 0; i < b.N; i++ {

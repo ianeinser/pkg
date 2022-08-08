@@ -5,7 +5,7 @@ import (
 	"time"
 
 	"github.com/go-redis/redis"
-	"github.com/openware/pkg/types"
+	"github.com/ianeinser/pkg/types"
 )
 
 // Connect the redis with default database

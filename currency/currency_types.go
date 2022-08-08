@@ -3,7 +3,7 @@ package currency
 import (
 	"time"
 
-	"github.com/openware/pkg/currency/coinmarketcap"
+	"github.com/ianeinser/pkg/currency/coinmarketcap"
 )
 
 // MainConfiguration is the main configuration from the config.json file

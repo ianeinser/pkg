@@ -3,7 +3,7 @@ package currencylayer
 import (
 	"testing"
 
-	"github.com/openware/pkg/currency/forexprovider/base"
+	"github.com/ianeinser/pkg/currency/forexprovider/base"
 )
 
 var c CurrencyLayer

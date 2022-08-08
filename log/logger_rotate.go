@@ -6,7 +6,7 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/openware/pkg/common/file"
+	"github.com/ianeinser/pkg/common/file"
 )
 
 // Write implementation to satisfy io.Writer handles length check and rotation

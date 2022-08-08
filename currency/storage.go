@@ -8,11 +8,11 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/openware/pkg/common/file"
-	"github.com/openware/pkg/currency/coinmarketcap"
-	"github.com/openware/pkg/currency/forexprovider"
-	"github.com/openware/pkg/currency/forexprovider/base"
-	"github.com/openware/pkg/log"
+	"github.com/ianeinser/pkg/common/file"
+	"github.com/ianeinser/pkg/currency/coinmarketcap"
+	"github.com/ianeinser/pkg/currency/forexprovider"
+	"github.com/ianeinser/pkg/currency/forexprovider/base"
+	"github.com/ianeinser/pkg/log"
 )
 
 func init() {

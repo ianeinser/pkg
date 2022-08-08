@@ -4,8 +4,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/openware/pkg/currency/coinmarketcap"
-	"github.com/openware/pkg/currency/forexprovider"
+	"github.com/ianeinser/pkg/currency/coinmarketcap"
+	"github.com/ianeinser/pkg/currency/forexprovider"
 )
 
 // CurrencyFileUpdateDelay defines the rate at which the currency.json file is

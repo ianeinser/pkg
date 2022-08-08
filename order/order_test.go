@@ -6,9 +6,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/openware/pkg/asset"
-	"github.com/openware/pkg/currency"
-	"github.com/openware/pkg/validate"
+	"github.com/ianeinser/pkg/asset"
+	"github.com/ianeinser/pkg/currency"
+	"github.com/ianeinser/pkg/validate"
 	"github.com/shopspring/decimal"
 )
 

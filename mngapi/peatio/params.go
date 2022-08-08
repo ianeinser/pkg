@@ -197,12 +197,13 @@ type Beneficiary struct {
 }
 
 type CreateBeneficiaryParams struct {
-	Currency    string                 `json:"currency"`
-	Name        string                 `json:"name"`
-	Description string                 `json:"description,omitempty"`
-	Data        map[string]interface{} `json:"data"`
-	UID         string                 `json:"uid"`
-	State       string                 `json:"state,omitempty"`
+	Currency      string                 `json:"currency"`
+	Name          string                 `json:"name"`
+	BlockchainKey string                 `json:"blockchain_key"`
+	Description   string                 `json:"description,omitempty"`
+	Data          map[string]interface{} `json:"data"`
+	UID           string                 `json:"uid"`
+	State         string                 `json:"state,omitempty"`
 }
 
 type GetBeneficiariesParams struct {

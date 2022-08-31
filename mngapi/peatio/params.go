@@ -18,6 +18,14 @@ type CreateWithdrawParams struct {
 	AdditionalFee bool    `json:"additional_fee,omitempty"`
 }
 
+type WithdrawsListParams struct {
+	UID      string `json:"uid"`
+	Currency string `json:"currency"`
+	Page     int64  `json:"page,omitempty"`
+	Limit    int64  `json:"limit,omitempty"`
+	State    string `json:"state,omitempty"`
+}
+
 type GenerateDepositAddressParams struct {
 	UID           string `json:"uid"`
 	Currency      string `json:"currency"`

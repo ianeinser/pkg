@@ -170,6 +170,22 @@ func (p *Client) GetWithdrawByID(tid string) (*Withdraw, *mngapi.APIError) {
 	return withdraw, nil
 }
 
+// GetCurrenciesList call peatio management api to get currency information by code name
+func (p *Client) GetWithdrawsList(params WithdrawsListParams) (*[]Withdraw, *mngapi.APIError) {
+	res, apiError := p.mngapiClient.Request(http.MethodPost, "withdraws", params)
+	if apiError != nil {
+		return nil, apiError
+	}
+
+	withdraws := []Withdraw{}
+	err := json.Unmarshal([]byte(res), &withdraws)
+	if err != nil {
+		return nil, &mngapi.APIError{StatusCode: 500, Error: err.Error()}
+	}
+
+	return &withdraws, nil
+}
+
 // GetAccountBalance call peatio management api to get account balance
 func (p *Client) GetAccountBalance(params GetAccountBalanceParams) (*Balance, *mngapi.APIError) {
 	res, apiError := p.mngapiClient.Request(http.MethodPost, "accounts/balance", params)

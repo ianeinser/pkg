@@ -477,20 +477,20 @@ func (p *Client) CreateBeneficiary(params CreateBeneficiaryParams) (*Beneficiary
 	return beneficiary, nil
 }
 
-func (p *Client) GetBeneficiaries(params GetBeneficiariesParams) ([]*Beneficiary, *mngapi.APIError) {
+func (p *Client) GetBeneficiaries(params GetBeneficiariesParams) (*[]Beneficiary, *mngapi.APIError) {
 	res, apiError := p.mngapiClient.Request(http.MethodPost, "beneficiaries/list", params)
 	if apiError != nil {
 		return nil, apiError
 	}
 
-	beneficiaries := make([]*Beneficiary, 0)
+	beneficiaries := make([]Beneficiary, 100)
 
 	err := json.Unmarshal([]byte(res), &beneficiaries)
 	if err != nil {
 		return nil, &mngapi.APIError{StatusCode: 500, Error: err.Error()}
 	}
 
-	return beneficiaries, nil
+	return &beneficiaries, nil
 }
 
 func (p *Client) ChangeDepositState(params ChangeDepositStateParams) (*Deposit, *mngapi.APIError) {

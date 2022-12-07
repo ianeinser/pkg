@@ -1,6 +1,9 @@
 package peatio
 
-import "gorm.io/datatypes"
+import (
+	"github.com/lib/pq"
+	"gorm.io/datatypes"
+)
 
 type GetAccountBalanceParams struct {
 	UID      string `json:"uid"`
@@ -107,19 +110,19 @@ type CurrenciesListParams struct {
 }
 
 type CreateBlockchainCurrencyParams struct {
-	CurrencyID          string                 `json:"currency_id"`
-	BlockchainKey       string                 `json:"blockchain_key,omitempty"`
-	BaseFactor          int64                  `json:"base_factor,omitempty"`
-	ParentID            string                 `json:"parent_id,omitempty"`
-	DepositFee          string                 `json:"deposit_fee,omitempty"`
-	MinDepositAmount    string                 `json:"min_deposit_amount,omitempty"`
-	MinCollectionAmount string                 `json:"min_collection_amount,omitempty"`
-	WithdrawFee         string                 `json:"withdraw_fee,omitempty"`
-	MinWithdrawAmount   string                 `json:"min_withdraw_amount,omitempty"`
-	DepositEnabled      bool                   `json:"deposit_enabled,omitempty"`
-	WithdrawEnabled     bool                   `json:"withdrawal_enabled,omitempty"`
-	Status              string                 `json:"status,omitempty"`
-	Options             map[string]interface{} `json:"options"`
+	CurrencyID          string            `json:"currency_id"`
+	BlockchainKey       string            `json:"blockchain_key,omitempty"`
+	BaseFactor          int64             `json:"base_factor,omitempty"`
+	ParentID            string            `json:"parent_id,omitempty"`
+	DepositFee          string            `json:"deposit_fee,omitempty"`
+	MinDepositAmount    string            `json:"min_deposit_amount,omitempty"`
+	MinCollectionAmount string            `json:"min_collection_amount,omitempty"`
+	WithdrawFee         string            `json:"withdraw_fee,omitempty"`
+	MinWithdrawAmount   string            `json:"min_withdraw_amount,omitempty"`
+	DepositEnabled      bool              `json:"deposit_enabled,omitempty"`
+	WithdrawEnabled     bool              `json:"withdrawal_enabled,omitempty"`
+	Status              string            `json:"status,omitempty"`
+	Options             datatypes.JSONMap `json:"options"`
 }
 
 type CreateCurrencyParams struct {
@@ -145,16 +148,16 @@ type UpdateCurrencyParams struct {
 }
 
 type UpdateBlockchainCurrencyParams struct {
-	ID                  string                 `json:"id"`
-	DepositFee          string                 `json:"deposit_fee,omitempty"`
-	MinDepositAmount    string                 `json:"min_deposit_amount,omitempty"`
-	MinCollectionAmount string                 `json:"min_collection_amount,omitempty"`
-	WithdrawFee         string                 `json:"withdraw_fee,omitempty"`
-	MinWithdrawAmount   string                 `json:"min_withdraw_amount,omitempty"`
-	DepositEnabled      bool                   `json:"deposit_enabled,omitempty"`
-	WithdrawEnabled     bool                   `json:"withdrawal_enabled,omitempty"`
-	Status              string                 `json:"status,omitempty"`
-	Options             map[string]interface{} `json:"options"`
+	ID                  string            `json:"id"`
+	DepositFee          string            `json:"deposit_fee,omitempty"`
+	MinDepositAmount    string            `json:"min_deposit_amount,omitempty"`
+	MinCollectionAmount string            `json:"min_collection_amount,omitempty"`
+	WithdrawFee         string            `json:"withdraw_fee,omitempty"`
+	MinWithdrawAmount   string            `json:"min_withdraw_amount,omitempty"`
+	DepositEnabled      bool              `json:"deposit_enabled,omitempty"`
+	WithdrawEnabled     bool              `json:"withdrawal_enabled,omitempty"`
+	Status              string            `json:"status,omitempty"`
+	Options             datatypes.JSONMap `json:"options"`
 }
 
 type CreateMemberParams struct {
@@ -171,28 +174,28 @@ type Settings struct {
 	Secret string `json:"secret,omitempty"`
 }
 type CreateWalletParams struct {
-	BlockchainKey string   `json:"blockchain_key"`
-	Name          string   `json:"name"`
-	Kind          string   `json:"kind"`
-	Gateway       string   `json:"gateway"`
-	Address       string   `json:"address"`
-	Currencies    []string `json:"currencies,omitempty"`
-	Settings      Settings `json:"settings,omitempty"`
-	MaxBalance    string   `json:"max_balance,omitempty"`
-	Status        string   `json:"status,omitempty"`
+	BlockchainKey string         `json:"blockchain_key"`
+	Name          string         `json:"name"`
+	Kind          string         `json:"kind"`
+	Gateway       string         `json:"gateway"`
+	Address       string         `json:"address"`
+	Currencies    pq.StringArray `json:"currencies,omitempty"`
+	Settings      Settings       `json:"settings,omitempty" gorm:"embedded;embedded_prefix:set_"`
+	MaxBalance    string         `json:"max_balance,omitempty"`
+	Status        string         `json:"status,omitempty"`
 }
 
 type UpdateWalletParams struct {
-	ID            string   `json:"id"`
-	BlockchainKey string   `json:"blockchain_key,omitempty"`
-	Name          string   `json:"name,omitempty"`
-	Address       string   `json:"address,omitempty"`
-	Gateway       string   `json:"gateway,omitempty"`
-	Kind          string   `json:"kind,omitempty"`
-	Currencies    []string `json:"currencies,omitempty"`
-	Settings      Settings `json:"settings,omitempty"`
-	MaxBalance    string   `json:"max_balance,omitempty"`
-	Status        string   `json:"status,omitempty"`
+	ID            string         `json:"id"`
+	BlockchainKey string         `json:"blockchain_key,omitempty"`
+	Name          string         `json:"name,omitempty"`
+	Address       string         `json:"address,omitempty"`
+	Gateway       string         `json:"gateway,omitempty"`
+	Kind          string         `json:"kind,omitempty"`
+	Currencies    pq.StringArray `json:"currencies,omitempty"`
+	Settings      Settings       `json:"settings,omitempty" gorm:"embedded;embedded_prefix:set_"`
+	MaxBalance    string         `json:"max_balance,omitempty"`
+	Status        string         `json:"status,omitempty"`
 }
 
 type Beneficiary struct {
@@ -207,13 +210,13 @@ type Beneficiary struct {
 }
 
 type CreateBeneficiaryParams struct {
-	Currency      string                 `json:"currency"`
-	Name          string                 `json:"name"`
-	BlockchainKey string                 `json:"blockchain_key"`
-	Description   string                 `json:"description,omitempty"`
-	Data          map[string]interface{} `json:"data"`
-	UID           string                 `json:"uid"`
-	State         string                 `json:"state,omitempty"`
+	Currency      string            `json:"currency"`
+	Name          string            `json:"name"`
+	BlockchainKey string            `json:"blockchain_key"`
+	Description   string            `json:"description,omitempty"`
+	Data          datatypes.JSONMap `json:"data"`
+	UID           string            `json:"uid"`
+	State         string            `json:"state,omitempty"`
 }
 
 type GetBeneficiariesParams struct {

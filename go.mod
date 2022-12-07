@@ -10,7 +10,7 @@ require (
 	github.com/gofrs/uuid v4.2.0+incompatible
 	github.com/golang-jwt/jwt v3.2.2+incompatible
 	github.com/gomarkdown/markdown v0.0.0-20220731190611-dcdaee8e7a53
-	github.com/ianeinser/pkg/mngapi v0.0.0-20221206060037-bd9154268191
+	github.com/ianeinser/pkg/mngapi v0.0.0-20221207070600-5337de0b6b26
 	github.com/openware/kaigara/pkg/vault v0.0.0-20220719163221-540cd6b0bcbe
 	github.com/shopspring/decimal v1.3.1
 	github.com/stretchr/testify v1.8.0
@@ -70,7 +70,7 @@ require (
 	github.com/jinzhu/now v1.1.5 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
 	github.com/leodido/go-urn v1.2.1 // indirect
-	github.com/lib/pq v1.10.7
+	github.com/lib/pq v1.10.7 // indirect
 	github.com/mattn/go-colorable v0.1.6 // indirect
 	github.com/mattn/go-isatty v0.0.14 // indirect
 	github.com/mattn/go-sqlite3 v1.14.15 // indirect
@@ -102,5 +102,5 @@ require (
 	google.golang.org/protobuf v1.28.0 // indirect
 	gopkg.in/square/go-jose.v2 v2.5.1 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
-	gorm.io/datatypes v1.1.0
+	gorm.io/datatypes v1.1.0 // indirect
 )

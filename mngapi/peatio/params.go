@@ -1,5 +1,7 @@
 package peatio
 
+import "gorm.io/datatypes"
+
 type GetAccountBalanceParams struct {
 	UID      string `json:"uid"`
 	Currency string `json:"currency"`
@@ -194,14 +196,14 @@ type UpdateWalletParams struct {
 }
 
 type Beneficiary struct {
-	ID          int                    `json:"id"`
-	Currency    string                 `json:"currency"`
-	UID         string                 `json:"uid"`
-	Name        string                 `json:"name"`
-	Description string                 `json:"description"`
-	Data        map[string]interface{} `json:"data"` //-- contains account number, bank, asset code
-	State       string                 `json:"state"`
-	Sent_At     string                 `json:"sent_at"`
+	ID          int               `json:"id"`
+	Currency    string            `json:"currency"`
+	UID         string            `json:"uid"`
+	Name        string            `json:"name"`
+	Description string            `json:"description"`
+	Data        datatypes.JSONMap `json:"data"` //-- contains account number, bank, asset code
+	State       string            `json:"state"`
+	Sent_At     string            `json:"sent_at"`
 }
 
 type CreateBeneficiaryParams struct {

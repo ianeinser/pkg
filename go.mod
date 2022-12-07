@@ -10,7 +10,7 @@ require (
 	github.com/gofrs/uuid v4.2.0+incompatible
 	github.com/golang-jwt/jwt v3.2.2+incompatible
 	github.com/gomarkdown/markdown v0.0.0-20220731190611-dcdaee8e7a53
-	github.com/ianeinser/pkg/mngapi v0.0.0-20220831062132-13124563fa83
+	github.com/ianeinser/pkg/mngapi v0.0.0-20221206060037-bd9154268191
 	github.com/openware/kaigara/pkg/vault v0.0.0-20220719163221-540cd6b0bcbe
 	github.com/shopspring/decimal v1.3.1
 	github.com/stretchr/testify v1.8.0

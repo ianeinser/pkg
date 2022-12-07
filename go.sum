@@ -189,8 +189,8 @@ github.com/hashicorp/yamux v0.0.0-20180604194846-3520598351bb/go.mod h1:+NfK9FKe
 github.com/hpcloud/tail v1.0.0/go.mod h1:ab1qPbhIpdTxEkNHXyeSf5vhxWSCs/tWer42PpOxQnU=
 github.com/iancoleman/strcase v0.2.0 h1:05I4QRnGpI0m37iZQRuskXh+w77mr6Z41lwQzuHLwW0=
 github.com/iancoleman/strcase v0.2.0/go.mod h1:iwCmte+B7n89clKwxIoIXy/HfoL7AsD47ZCWhYzw7ho=
-github.com/ianeinser/pkg/mngapi v0.0.0-20220831062132-13124563fa83 h1:A92c8QpQ8Urz2UlwwxJ3WToBMOgKUxN2ODe0k2E/lC0=
-github.com/ianeinser/pkg/mngapi v0.0.0-20220831062132-13124563fa83/go.mod h1:1oQdpDeyHfsLVfYOFhWSxOyVsupbL1X/ryjXPz9oM4E=
+github.com/ianeinser/pkg/mngapi v0.0.0-20221206060037-bd9154268191 h1:g3jZaMlqSJj58zcDrfFQKDxjErAT0z9+fLn8A/PB98E=
+github.com/ianeinser/pkg/mngapi v0.0.0-20221206060037-bd9154268191/go.mod h1:1oQdpDeyHfsLVfYOFhWSxOyVsupbL1X/ryjXPz9oM4E=
 github.com/jackc/chunkreader v1.0.0/go.mod h1:RT6O25fNZIuasFJRyZ4R/Y2BbhasbmZXF9QQ7T3kePo=
 github.com/jackc/chunkreader/v2 v2.0.0/go.mod h1:odVSm741yZoC3dpHEUXIqA9tQRhFrgOHwnPIn9lDKlk=
 github.com/jackc/chunkreader/v2 v2.0.1 h1:i+RDz65UE+mmpjTfyz0MoVTnzeYxroil2G82ki7MGG8=

@@ -6,6 +6,7 @@ import (
 	"net/http"
 
 	"github.com/ianeinser/pkg/mngapi"
+	"github.com/ianeinser/pkg/mngapi/helper"
 )
 
 // Client is peatio management api client instance
@@ -473,6 +474,8 @@ func (p *Client) CreateBeneficiary(params CreateBeneficiaryParams) (*Beneficiary
 	if err != nil {
 		return nil, &mngapi.APIError{StatusCode: 500, Error: err.Error()}
 	}
+
+	beneficiary.BeneficiaryID = helper.GenerateIdempotencyKey()
 
 	return beneficiary, nil
 }

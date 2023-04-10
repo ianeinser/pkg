@@ -39,12 +39,13 @@ type GenerateDepositAddressParams struct {
 }
 
 type CreateDepositParams struct {
-	UID          string  `json:"uid"`
-	TID          string  `json:"tid,omitempty"`
-	Currency     string  `json:"currency"`
-	Amount       float64 `json:"amount"`
-	State        string  `json:"state,omitempty"`
-	TransferType string  `json:"transfer_type,omitempty"`
+	UID           string  `json:"uid"`
+	TID           string  `json:"tid,omitempty"`
+	Currency      string  `json:"currency"`
+	BlockchainKey string  `json:"blockchain_key"`
+	Amount        float64 `json:"amount"`
+	State         string  `json:"state,omitempty"`
+	TransferType  string  `json:"transfer_type,omitempty"`
 }
 
 type GetDepositsParams struct {

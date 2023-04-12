@@ -15,6 +15,7 @@ type CreateWithdrawParams struct {
 	TID           string  `json:"tid,omitempty"`
 	RID           string  `json:"rid,omitempty"`
 	BeneficiaryID string  `json:"beneficiary_id,omitempty"`
+	BlockchainKey string  `json:"blockchain_key"`
 	Currency      string  `json:"currency"`
 	Amount        float64 `json:"amount"`
 	Note          string  `json:"note,omitempty"`

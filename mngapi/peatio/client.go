@@ -202,6 +202,25 @@ func (p *Client) GetAccountBalance(params GetAccountBalanceParams) (*Balance, *m
 	return balance, nil
 }
 
+// GetAccountBalance call peatio management api to get account balance
+func (p *Client) GetAccountBalances(params GetAccountBalanceParams) (*[]Balance, *mngapi.APIError) {
+	res, apiError := p.mngapiClient.Request(http.MethodPost, "accounts/balances", params)
+	if apiError != nil {
+		return nil, apiError
+	}
+
+	//balance := &Balance{}
+	//err := json.Unmarshal([]byte(res), balance)
+
+	balances := make([]Balance, 100)
+	err := json.Unmarshal([]byte(res), &balances)
+	if err != nil {
+		return nil, &mngapi.APIError{StatusCode: 500, Error: err.Error()}
+	}
+
+	return &balances, nil
+}
+
 // GenerateDepositAddress call peatio management api to generate new deposit address
 func (p *Client) GenerateDepositAddress(params GenerateDepositAddressParams) (*PaymentAddress, *mngapi.APIError) {
 	res, apiError := p.mngapiClient.Request(http.MethodPost, "deposit_address/new", params)

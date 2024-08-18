@@ -207,7 +207,8 @@ type UpdateWalletParams struct {
 
 type Beneficiary struct {
 	ID          int               `json:"id"`
-	Currency    string            `json:"currency"`
+	MemberID    int               `json:"member_id"`
+	CurrencyID  string            `json:"currency_id"`
 	Name        string            `json:"name"`
 	Description string            `json:"description"`
 	Data        datatypes.JSONMap `json:"data"` //-- contains account number, bank, asset code

@@ -203,7 +203,7 @@ func (p *Client) GetAccountBalance(params GetAccountBalanceParams) (*Balance, *m
 }
 
 // GetAccountBalance call peatio management api to get account balance
-func (p *Client) GetAccountBalances(params GetAccountBalanceParams) (*[]Balance, *mngapi.APIError) {
+func (p *Client) GetAccountBalances(params GetAccountBalancesParams) (*[]Balance, *mngapi.APIError) {
 	res, apiError := p.mngapiClient.Request(http.MethodPost, "accounts/balances", params)
 	if apiError != nil {
 		return nil, apiError

@@ -10,6 +10,11 @@ type GetAccountBalanceParams struct {
 	Currency string `json:"currency"`
 }
 
+type GetAccountBalancesParams struct {
+	Currency string `json:"currency"`
+	Type     string `json:"type"`
+}
+
 type CreateWithdrawParams struct {
 	UID           string  `json:"uid"`
 	TID           string  `json:"tid,omitempty"`

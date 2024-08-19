@@ -12,7 +12,9 @@ type GetAccountBalanceParams struct {
 
 type GetAccountBalancesParams struct {
 	Currency string `json:"currency"`
-	Type     string `json:"type"`
+	Boy      bool   `json:"boy"`
+	Page     int64  `json:"page"`
+	Limit    int64  `json:"limit"`
 }
 
 type CreateWithdrawParams struct {
